@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pizzahut_app/loginUI.dart';
 
+import 'loginUI.dart';
 
 void main() => runApp(MyAppRegister());
 

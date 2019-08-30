@@ -20,37 +20,37 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    //Size size = MediaQuery.of(context).size;
+    Size size = MediaQuery.of(context).size;
     return Scaffold(
       resizeToAvoidBottomPadding: false,
       body: Stack(
         children: <Widget>[
-          //Container(decoration: new BoxDecoration(image: DecorationImage(image: AssetImage("images/bac.png"),fit: BoxFit.cover,)),),
-          //Positioned.fill(child: Image(image: AssetImage("images/back.png"),fit: BoxFit.cover,),),
-          // Center(child: new Image.asset('images/loginBack.png',
-          //   width: size.width,
-          //   height: size.height,
-          //   fit: BoxFit.fill,
-          // ),),
-          // Container(
-          //   padding: EdgeInsets.only(top:37.0,left: 110.0),
-          //   child: Stack(
-          //     children: <Widget>[
-          //       Container(
-          //         height: 120.0,
-          //         width: 120.0,
-          //         decoration: BoxDecoration(
-          //           image: DecorationImage(
-          //             image: AssetImage(
-          //               "images/logo.png"
-          //             ),fit: BoxFit.fill,
-          //           ),
-          //           shape: BoxShape.circle,
-          //         ),
-          //       ),
-          //     ],
-          //   ),
-          // ),
+          // Container(decoration: new BoxDecoration(image: DecorationImage(image: AssetImage("assets/bac.png"),fit: BoxFit.cover,)),),
+          // Positioned.fill(child: Image(image: AssetImage("assets/back.png"),fit: BoxFit.cover,),),
+          Center(child: new Image.asset('images/loginBack.png',
+            width: size.width,
+            height: size.height,
+            fit: BoxFit.fill,
+          ),),
+          Container(
+            padding: EdgeInsets.only(top:37.0,left: 110.0),
+            child: Stack(
+              children: <Widget>[
+                Container(
+                  height: 120.0,
+                  width: 120.0,
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                      image: AssetImage(
+                        "images/logo.png"
+                      ),fit: BoxFit.fill,
+                    ),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+              ],
+            ),
+          ),
           Container(
             padding: EdgeInsets.only(top:200.0, left:30.0, right:30.0),
             child: Column(
@@ -146,7 +146,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Center(
-                         // child: Image.asset("images/f.png",color: Colors.white,height: 25.0,),
+                         child: Image.asset("images/f.png",color: Colors.white,height: 25.0,),
                         ),
                         SizedBox(width: 10.0,),
                         Center(
@@ -186,7 +186,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Center(
-                         //child: Image.asset("images/g.png",color: Colors.white,height: 25.0,),
+                         child: Image.asset("images/g.png",color: Colors.white,height: 25.0,),
                         ),
                         SizedBox(width: 10.0,),
                         Center(
