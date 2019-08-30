@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:pizzahut_app/loginUI.dart';
+import 'package:pizzahut_app/register.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,11 +47,47 @@ class _PizzaHutHomePageState extends State<PizzaHutHomePage> {
             onPressed: (){_pressed('clicked');},
           )
         ],
-        leading: IconButton(
-          icon: new Icon(Icons.menu),
-          onPressed: (){_pressed('Drawer');},
+        // leading: IconButton(
+        //   icon: new Icon(Icons.menu),
+        //   onPressed: (){_pressed('Drawer');},
+        // ),
+      ),
+
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: <Widget>[
+            DrawerHeader(
+              child: Text('Welcome'),
+              decoration: BoxDecoration(
+                color: Colors.redAccent
+              ),
+            ),
+            ListTile(
+              title: Text('Home'),
+              leading: Icon(Icons.home),
+              onTap: (){},
+            ),
+            ListTile(
+              title: Text('Sign In'),
+              leading: Icon(Icons.assignment_ind),
+              onTap: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context)=> MyAppLogin()));
+              },
+            ),
+            ListTile(
+              title: Text('Register'),
+              leading: Icon(Icons.library_add),
+              onTap: (){
+                Navigator.push(context, 
+                MaterialPageRoute(builder: (context)=> MyAppRegister()));
+              },
+            ),
+          ],
         ),
       ),
+
       body: new Stack(
         fit: StackFit.expand,
         children: <Widget>[
