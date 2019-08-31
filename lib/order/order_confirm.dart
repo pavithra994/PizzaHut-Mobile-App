@@ -1,21 +1,21 @@
 // import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:pizzahut_app/menu/select_pizza.dart';
+import 'package:pizzahut_app/payment/online_pay.dart';
 // import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-class DeliveryLocationScreen extends StatefulWidget {
+class OrderConfirmScreen extends StatefulWidget {
   @override
-  _DeliveryLocationScreenState createState() => _DeliveryLocationScreenState();
+  _OrderConfirmScreenState createState() => _OrderConfirmScreenState();
 }
 
-class _DeliveryLocationScreenState extends State<DeliveryLocationScreen> {
+class _OrderConfirmScreenState extends State<OrderConfirmScreen> {
   // Completer<GoogleMapController> _controller = Completer();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("select delivery location"),
+        title: Text("select pizza"),
       ),
       body: new Stack(
         fit: StackFit.expand,
@@ -39,7 +39,7 @@ class _DeliveryLocationScreenState extends State<DeliveryLocationScreen> {
                 child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text("deliver page")
+                          Text("menu page")
                         ],
                       ),
 
@@ -62,10 +62,10 @@ class _DeliveryLocationScreenState extends State<DeliveryLocationScreen> {
                       ),
                       RaisedButton(
                         child: Text("next"),
-                        color: new Color(0xff622f74),
+                        color: Colors.green,
                         onPressed: (){
                           Navigator.push(context,
-                          MaterialPageRoute(builder: (context)=>SelectPizzaScreen()));
+                          MaterialPageRoute(builder: (context)=>OnlinePaymentScreen()));
                         },
                       )
                     ],
