@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:pizzahut_app/loginUI.dart';
 import 'package:pizzahut_app/register.dart';
 
+import 'delivery/delivery.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -134,6 +136,10 @@ class _PizzaHutHomePageState extends State<PizzaHutHomePage> {
                                       if(data){
                                         print("Delivery");
                                         _pressed('Delivery');
+                                        Navigator.push(
+                                          context,
+                                          MaterialPageRoute(builder: (context)=>DeliveryLocationScreen())
+                                          );
                                       }
                                     }, 
                                   ),
